@@ -1,2 +1,77 @@
-# joel-soyemi-portfolio
-Joel Soyemi’s creative developer portfolio — glass UI, interactive 3D, real project previews, and a creative playground.
+# Joel Soyemi — Portfolio
+
+Repository: [joelsoyemi-cloud/joel-soyemi-portfolio](https://github.com/joelsoyemi-cloud/joel-soyemi-portfolio). The complete portfolio is on the default `main` branch.
+
+A personal portfolio built with Next.js, React, TypeScript, and Three.js. Mint glass controls, an interactive sculpture, real project links, and a small interaction lab.
+
+## Run
+
+Use Node.js 20.9 or later.
+
+    npm ci
+    npm run dev
+
+Open http://localhost:3000. The development wrapper translates generic preview host flags into Next.js flags and uses Webpack for development compatibility.
+
+## Check and build
+
+    npm run typecheck
+    npm run build
+
+The project exports a static website to `out/`. Deploy that directory to a static host, or import the repository into Vercel as a Next.js project. No environment variables, database, or paid service are required.
+
+Production output is static. Preview the exported directory with your static host's local tooling.
+
+## Content
+
+- Update the projects and verified contact links in `app/lib/content.ts`.
+- Edit the page in `app/components/Portfolio.tsx`.
+- The lazy-loaded 3D scene is in `app/components/SpatialScene.tsx`.
+- The particle universe, type poster, and gravity sandbox are in `app/components/CreativePlayground.tsx`.
+- Canvas sizing, visibility, and animation-frame cleanup are shared in `app/components/useCanvasSurface.ts`.
+- The smaller interaction lab is in `app/components/MotionStudy.tsx`.
+- Playground layout and controls are in `app/playground.css`.
+- Styles and responsive breakpoints are in `app/globals.css`.
+- Metadata lives in `app/layout.tsx`. On Vercel, social images use its production domain automatically. An optional public `NEXT_PUBLIC_SITE_URL` can override the origin for another host.
+
+Project previews are actual homepage screenshots captured on 23 October 2026, stored locally as optimized WebP images in `public/projects/`. Each preview, title, and visit action opens the exact website shown; the separate GitHub icon opens its matching source repository.
+
+| Project | Website | Source |
+| --- | --- | --- |
+| The Daily Byte | https://the-dailybyte-nine.vercel.app/ | [The-daily-byte](https://github.com/joelsoyemi-cloud/The-daily-byte) |
+| NYNTH Journal | https://nynth-mockup.vercel.app/ | [NYNTH-MOCKUP](https://github.com/joelsoyemi-cloud/NYNTH-MOCKUP) |
+| Academy Press | https://acad-press-pratice.vercel.app/ | [Acad-press-pratice-](https://github.com/joelsoyemi-cloud/Acad-press-pratice-) |
+
+NYNTH is the live static editorial design concept, rather than the separate React project. Academy Press is labeled as a private preview because visitors need an access code. No access code is included in this repository. The source-only Python CGPA tool remains available on Joel's GitHub profile.
+
+Screenshots preserve the sites' actual layout, colors, photography, and text. A video/carousel frame and published content may naturally change when visitors open a site. Refresh the captures when those sites are redesigned.
+
+## Vercel
+
+Import this repository into the intended Vercel team as a Next.js project. The root directory is the repository root; install with `npm ci` and build with `npm run build`. No application secrets or database setup are required. Select the `main` branch, which contains the complete portfolio, including the glass UI, 3D scene, project images, and expanded Play section. The connected Vercel account must have access to the target team before project creation or deployment can succeed.
+
+## Interactions and accessibility
+
+The sculpture supports drag, arrow-key rotation, and Home to reset. Jade, Chrome, and Frost change its material. A CSS sculpture remains available when WebGL cannot start; its material choices and keyboard controls still work.
+
+The motion toggle defaults to the system's reduced-motion preference and saves an explicit choice locally. It stops decorative animation, resets pointer tilt, and pauses the 3D render loop. Offscreen and background scenes also stop their render loop. Pixel density and geometry detail are capped for smaller screens.
+
+Play now includes three larger creative experiments:
+
+- **Particle universe:** a 216-point field with Orbit, Ribbon, and Lattice shapes, pointer distortion, tap/keyboard scattering, and remixed editions.
+- **Type poster:** editable text, editorial/grotesk type, three palettes, a stretch slider, and rotating creative prompts.
+- **Gravity sandbox:** a bounded circle-physics toy with dragging/throwing, adjustable gravity, shake/reset controls, keyboard drops and nudges, and an 18-pebble limit.
+
+The two new canvases use the browser's 2D renderer, so they work independently of the hero's WebGL scene. Their animation frames stop offscreen, in a background tab, or when global motion is paused. Explicit controls can repaint a static frame while paused. Canvas pixel density is capped at 1.5; animation uses a bounded time step, and physics state stays outside React renders. No dependencies, account, network calls, or persistent visitor data were added.
+
+The smaller lab includes magnetic attraction, perspective tilt, and a draggable spring interaction. Its tabs support Left/Right, Home, and End. The experiments can also be triggered with Enter or Space. Project filtering and contact links remain usable with motion off.
+
+Contact links use the verified GitHub profile by default. To use email instead, set `contact.email` in `app/lib/content.ts` to an address you intend to publish. Copy link reports a useful fallback when clipboard access is denied. There is no contact-form backend.
+
+For a deliberate low-graphics view, append `?graphics=off` to the URL.
+
+## Design references and verification
+
+See [the reference and motion notes](docs/DESIGN-REFERENCES.md) and [verification results](docs/VERIFICATION.md).
+
+The portfolio uses original interface code and a procedural hero sculpture, with screenshots from Joel’s own project sites. Pinterest references were found through public search results; Pinterest denied access to full pin pages in this browser, so their full motion was not inspected or copied.
