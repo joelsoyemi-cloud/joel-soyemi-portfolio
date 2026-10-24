@@ -7,6 +7,9 @@ import type { CSSProperties } from "react";
 import Icon, { Asterisk } from "./Icon";
 import MotionStudy from "./MotionStudy";
 import CreativePlayground from "./CreativePlayground";
+import MorphismStudio from "./MorphismStudio";
+import MaterialScrollStory from "./MaterialScrollStory";
+import CinematicJourney from "./CinematicJourney";
 import { contact, filters, materials, projects } from "../lib/content";
 import type { Project, ProjectFilter, SculptureMaterial } from "../lib/content";
 
@@ -575,8 +578,10 @@ export default function Portfolio() {
           </div>
         </section>
 
+        <CinematicJourney motion={motion} />
+
         <section
-          id="play"
+          id="play-experiments"
           className="play-section page-width"
           aria-labelledby="play-title"
         >
@@ -591,7 +596,7 @@ export default function Portfolio() {
               <em>case for play.</em>
             </h2>
             <p>
-              Bend a word. Scatter a small universe. Throw something around.
+              Give an interface 24 personalities. Bend a word. Scatter a small universe. Throw something around.
               A few ideas that made it out of my sketchbook.
             </p>
             <p>
@@ -599,6 +604,8 @@ export default function Portfolio() {
               is yours to mess with.
             </p>
           </div>
+          <MaterialScrollStory motion={motion} />
+          <MorphismStudio motion={motion} />
           <CreativePlayground motion={motion} />
           <div className="micro-lab-copy" data-reveal>
             <span className="eyebrow">AND THEN THERE ARE THE SMALL DETAILS.</span>

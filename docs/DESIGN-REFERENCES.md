@@ -74,3 +74,12 @@ Play now moves from a large generative field into two hands-on studies, followed
 | A little weight | Drop, drag/release, arrow keys, gravity, shake/reset | Bounded pebbles with gravity, collisions, bounce, and a static arrangement when paused |
 
 Canvas 2D keeps the new experiments independent of WebGL availability. Their continuous motion follows the existing global preference and stops offscreen. The gravity toy is a small custom circle simulation rather than an engineering model.
+
+
+## User-supplied motion references — 24 October 2026
+
+The two recordings supplied in this conversation make the reference motion inspectable despite Pinterest’s access restriction. One shows a bright premium car-rental layout with extensive white space, floating phone mockups, a vehicle grid, feature-card reveals, and a dark closing call to action. The second shows a dark editorial car-customization site with oversized serif typography, full-bleed close-ups, image scaling, alternating text/image scenes, a collage, and a multi-vehicle closing composition.
+
+The portfolio adapts these techniques through an original dark orbital sequence, scroll-controlled framing, large editorial type, a layered gallery of Joel’s own project captures, and a transition back into the light playground. A separate material scroll study presents glass, clay, and bold outlined surfaces. The recordings and their car assets are reference material only and are not bundled into the public site. Original Pinterest short links: https://pin.it/4G387tk9f and https://pin.it/3u9dPFVer .
+
+The 24-style library combines UI morphisms, material interpretations, design movements, and experimental finishes; its interface states this distinction. Platform material guidance consulted: Apple’s materials guidelines (https://developer.apple.com/design/human-interface-guidelines/materials), Microsoft’s materials overview (https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/materials), and Mica guidance (https://learn.microsoft.com/en-us/windows/apps/design/style/mica). The demo does not claim native Liquid Glass, Acrylic, or Mica rendering.

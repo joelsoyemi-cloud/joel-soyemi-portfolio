@@ -61,3 +61,24 @@ The existing hero WebGL and physical iOS/Android device checks remain outstandin
 ## Independent repository — 23 October 2026
 
 The complete custom portfolio has been copied to `joelsoyemi-cloud/joel-soyemi-portfolio` on `main`. This repository is independent of the earlier fork and uses a new commit history. Application code, dependency versions, and public project images are unchanged from the verified portfolio. Deployment remains a separate step.
+
+## Morphism Studio and cinematic journey — 24 October 2026
+
+Story: visitors enter the new cinematic Play sequence, explore three chapters and the project previews, then choose and manipulate a material in the studio. All interaction state is local; there is no API, account, or database requirement.
+
+Verified in the exported production site:
+
+- All 24 material presets update Surface A. Computed backgrounds, borders, shadow treatments, and corner radii confirm distinct finishes rather than palette-only changes.
+- Glass, Soft, Physical, Graphic, and Digital tabs show 4, 3, 5, 6, and 6 presets. Home returns to the full 24-style collection.
+- Globe, Waves, Torus, Cube, and Bloom update the field. Scatter and Enter increment the scatter count; arrow-key input is handled by the field. Attract, Vortex, and Scatter controls select their behaviors.
+- Force reaches 2.0×, roundness reaches 48px and changes the computed corner radius, and depth reaches 100%.
+- Comparison renders two nonzero Canvas 2D surfaces. The comparison dropdown updates Surface B independently. Shared scatter targets both fields. Remix changes the edition/style/shape; Reset restores the default studio and full collection.
+- With motion off, all three cinematic chapters remain available through buttons. Frames exposes the three matching live-project links; inactive project links leave the keyboard sequence. Jade/Amber selection changes the scene grade. Warp and Enter increment the jump counter; arrow-key exploration remains available.
+- The cinematic Canvas fallback renders at a nonzero viewport size when this browser cannot create WebGL. Its orbital composition was visually inspected.
+- With motion on, the cinematic journey has a sticky stage and scroll-driven progress. Selecting Orbit reaches the first chapter at approximately 0.133 progress.
+- Responsive frame widths 320, 390, and 768 pixels have no horizontal document overflow after clipping the small material story’s decorative artwork on narrow screens. Content widths exclude the browser scrollbar. Comparison stacks on phone widths and uses two columns on the wider frame.
+- The optimized static build and its TypeScript check pass, including the Sites build helper.
+
+The uploaded reference clips were reviewed across their full durations through sequential frames. The clips and their car imagery are not distributed with the site. The new scene is original procedural artwork, and the floating previews reuse Joel’s project screenshots.
+
+Limits: cloud WebGL is disabled, so the actual GPU scene, visual parity between GPU and fallback, physical phone touch behavior, and real-device frame rates remain unverified. These are device checks, not compile failures. The managed development preview did not hydrate reliably; interaction verification used a separate static QA copy of the production export served by the supported supervisor.

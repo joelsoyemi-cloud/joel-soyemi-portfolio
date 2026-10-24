@@ -2,7 +2,7 @@
 
 Repository: [joelsoyemi-cloud/joel-soyemi-portfolio](https://github.com/joelsoyemi-cloud/joel-soyemi-portfolio). The complete portfolio is on the default `main` branch.
 
-A personal portfolio built with Next.js, React, TypeScript, and Three.js. Mint glass controls, an interactive sculpture, real project links, and a small interaction lab.
+A personal portfolio built with Next.js, React, TypeScript, and Three.js. Mint glass controls, an interactive sculpture, real project previews, a cinematic orbital journey, and an extensive interactive playground.
 
 ## Run
 
@@ -27,6 +27,9 @@ Production output is static. Preview the exported directory with your static hos
 - Update the projects and verified contact links in `app/lib/content.ts`.
 - Edit the page in `app/components/Portfolio.tsx`.
 - The lazy-loaded 3D scene is in `app/components/SpatialScene.tsx`.
+- The cinematic scroll sequence is in `app/components/CinematicJourney.tsx`; its lazy Three.js scene and Canvas fallback are in `app/components/SpaceScene.tsx`.
+- The 24-style studio and its morphing field are in `app/components/MorphismStudio.tsx` and `app/components/MorphismField.tsx`. Styles and families live in `app/lib/morphisms.ts`.
+- The glass/clay/outline scroll story is in `app/components/MaterialScrollStory.tsx`.
 - The particle universe, type poster, and gravity sandbox are in `app/components/CreativePlayground.tsx`.
 - Canvas sizing, visibility, and animation-frame cleanup are shared in `app/components/useCanvasSurface.ts`.
 - The smaller interaction lab is in `app/components/MotionStudy.tsx`.
@@ -49,6 +52,16 @@ Screenshots preserve the sites' actual layout, colors, photography, and text. A 
 ## Vercel
 
 Import this repository into the intended Vercel team as a Next.js project. The root directory is the repository root; install with `npm ci` and build with `npm run build`. No application secrets or database setup are required. Select the `main` branch, which contains the complete portfolio, including the glass UI, 3D scene, project images, and expanded Play section. The connected Vercel account must have access to the target team before project creation or deployment can succeed.
+
+## New exploration sections
+
+The Play navigation opens a cinematic, three-chapter sequence: an orbital world, floating browser previews of Joel’s three real projects, and an entrance to the playground. Scrolling moves the camera and layered frames. The sequence also supports manual chapter buttons, Jade/Amber lighting, pointer/arrow-key exploration, and click/Enter/Warp actions. The scene loads only near the viewport. Its WebGL geometry and star field stop rendering offscreen, in a background tab, or when motion is paused. A procedural Canvas 2D interpretation is available when WebGL is unavailable, deliberately disabled, or its context is lost.
+
+A second scroll study layers glass, clay, and outlined cards. Turning motion off removes the long sticky journeys and lets visitors select each chapter directly. Neither sequence intercepts wheel or touch scrolling.
+
+**Morphism Studio** includes 24 UI materials and visual styles in Glass, Soft, Physical, Graphic, and Digital families. It is a curated collection rather than a claim that there is a finite, universal list of morphisms. It includes glass/liquid/frost/acrylic, neumorphism/clay/organic bloom, tactile physical finishes, flat/material/brutalist treatments, and luminous experimental styles. Acrylic, Mica, and Liquid Glass are browser interpretations, not native platform materials.
+
+Every preset changes the live specimen and its miniature. Visitors can morph a 336-point object between Globe, Waves, Torus, Cube, and Bloom; scatter, attract, or swirl the field; set interaction force, roundness, and depth; compare two independent materials; remix; and reset. Family tabs support arrow keys, Home, and End. The field supports pointer input, Enter/Space scattering, and arrow-key rotation. Canvas work follows the existing shared visibility and motion lifecycle. All state stays in the browser.
 
 ## Interactions and accessibility
 
@@ -74,4 +87,4 @@ For a deliberate low-graphics view, append `?graphics=off` to the URL.
 
 See [the reference and motion notes](docs/DESIGN-REFERENCES.md) and [verification results](docs/VERIFICATION.md).
 
-The portfolio uses original interface code and a procedural hero sculpture, with screenshots from Joel’s own project sites. Pinterest references were found through public search results; Pinterest denied access to full pin pages in this browser, so their full motion was not inspected or copied.
+The portfolio uses original interface code and a procedural hero sculpture, with screenshots from Joel’s own project sites. Pinterest references were found through public search results; Pinterest denied access to full pin pages in this browser. Two user-supplied video recordings were subsequently reviewed to study spacious layouts, floating previews, cinematic contrast, image scaling, and scroll choreography. Their car branding, footage, and assets are not included in this portfolio.
