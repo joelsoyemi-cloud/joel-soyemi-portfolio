@@ -703,6 +703,7 @@ h2 em {
 }
 .project-filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   border-bottom: 1px solid var(--line);
@@ -838,7 +839,8 @@ h2 em {
   line-height: 1.6;
   color: #6b765f;
 }
-.project-academy {
+.project-academy,
+.project-vault {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -847,17 +849,20 @@ h2 em {
   border-top: 1px solid var(--line);
   padding-top: 40px;
 }
-.project-academy .project-caption {
+.project-academy .project-caption,
+.project-vault .project-caption {
   margin-top: 0;
 }
 @media (max-width: 600px) {
-  .project-academy {
+  .project-academy,
+  .project-vault {
     grid-column: auto;
     display: block;
     border: 0;
     padding-top: 0;
   }
-  .project-academy .project-caption {
+  .project-academy .project-caption,
+  .project-vault .project-caption {
     margin-top: 20px;
   }
   .project-browser {

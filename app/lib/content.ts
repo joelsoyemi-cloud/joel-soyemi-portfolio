@@ -10,7 +10,7 @@ export type Project = {
   id: string;
   number: string;
   name: string;
-  category: "Editorial" | "Business";
+  category: "Editorial" | "Business" | "Creative";
   description: string;
   tags: string[];
   source: string;
@@ -57,9 +57,21 @@ export const projects: Project[] = [
     preview: "/projects/academy-press.webp",
     privatePreview: true,
   },
+  {
+    id: "vault",
+    number: "04",
+    name: "VAULT — Vintage Motors",
+    category: "Creative",
+    description:
+      "Five vintage icons, each in a full-screen 3D showroom. Scroll through the collection, uncover each car with a reversible cloth reveal, and explore the stories behind the silhouettes.",
+    tags: ["Next.js", "Three.js", "Blender"],
+    source: "https://github.com/joelsoyemi-cloud/joel-vault-motors",
+    site: "https://vintagemotors.vercel.app/",
+    preview: "/projects/vault-vintage-motors.webp",
+  },
 ];
 
-export const filters = ["All work", "Editorial", "Business"] as const;
+export const filters = ["All work", "Editorial", "Business", "Creative"] as const;
 export type ProjectFilter = (typeof filters)[number];
 export const materials = ["Jade", "Chrome", "Frost"] as const;
 export type SculptureMaterial = (typeof materials)[number];
