@@ -16,6 +16,7 @@ export type Project = {
   source: string;
   site: string;
   preview: string;
+  previewAlt?: string;
   privatePreview?: boolean;
 };
 
@@ -63,11 +64,12 @@ export const projects: Project[] = [
     name: "VAULT — Vintage Motors",
     category: "Creative",
     description:
-      "Five vintage icons, each in a full-screen 3D showroom. Scroll through the collection, uncover each car with a reversible cloth reveal, and explore the stories behind the silhouettes.",
+      "A cinematic studio for five vintage icons. Scrolling uncovers each car, moves the camera through the showroom, and leads into the stories and details behind the silhouettes.",
     tags: ["Next.js", "Three.js", "Blender"],
     source: "https://github.com/joelsoyemi-cloud/joel-vault-motors",
     site: "https://vintagemotors.vercel.app/",
-    preview: "/projects/vault-vintage-motors.webp",
+    preview: "/projects/vault-vintage-motors-studio.webp",
+    previewAlt: "The Corvette in VAULT’s automotive studio",
   },
 ];
 

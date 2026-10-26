@@ -43,7 +43,7 @@ function ProjectArtwork({ project }: { project: Project }) {
       <Image
         className="project-screenshot"
         src={project.preview}
-        alt={project.name + " homepage screenshot"}
+        alt={project.previewAlt ?? project.name + " homepage screenshot"}
         width={1348}
         height={926}
         sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 820px) calc((100vw - 68px) / 2), 560px"
